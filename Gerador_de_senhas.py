@@ -9,13 +9,13 @@ while continuar == True:
     print('MENU DE GERADOR DE SENHAS')
 
     menu= '''
-    1 -> Senha de 4 numeros:
-    2 -> Senha de 8 numeros:
-    3 -> Senha de 8 numeros com letras minusculas no final:
-    4 -> Senha de 8 numeros com letras maiuscula no final:
-    5 -> Senha de 8 numeros com letras menuscula e maiuscula no final:
+    1 -> Senha de 4 números:
+    2 -> Senha de 8 números:
+    3 -> Senha de 8 números com letras minúsculas no final:
+    4 -> Senha de 8 números com letras maiúscula no final:
+    5 -> Senha de 8 números com letras minúscula e maiúscula no final:
     6 -> Senha de 8 letras aleatorias:
-    7 -> Senha de 8 numeros e letras aleatorias:
+    7 -> Senha de 8 números e letras aleatorias:
     8 -> Gerar senha chave aleatoria identificadora universal exclusiva:
     '''
     print(menu)
@@ -28,7 +28,7 @@ while continuar == True:
         primeiro_menu = np.random.randint(0, 9, (1, 4))
         print(primeiro_menu)
     elif resposta_menu > 7:
-        print('\033[1;31m''nao existe esta opção no menu''\033[m')
+        print('\033[1;31m''não existe esta opção no menu''\033[m')
 
     if resposta_menu == 2:
         sleep(0.3)
@@ -39,7 +39,7 @@ while continuar == True:
 
     if resposta_menu == 3:
         sleep(0.3)
-        print('SENHA DE 8 DIGITOS COM LETRAS MINUSCULAS')
+        print('SENHA DE 8 DIGITOS COM LETRAS MINÚSCULAS')
         letras_minusculas_1 = chr(random.randint(ord('a'), ord('z')))
         letras_minusculas_2 = chr(random.randint(ord('a'), ord('z')))
         letras_minusculas_3 = chr(random.randint(ord('a'), ord('z')))
@@ -49,7 +49,7 @@ while continuar == True:
         print(terceiro_menu, letras_minusculas_1, letras_minusculas_2, letras_minusculas_3, letras_minusculas_4)
 
     if resposta_menu == 4:
-        print('SENHA DE 8 DIGITOS COM LETRAS MAIUSCULAS')
+        print('SENHA DE 8 DIGITOS COM LETRAS MAIÚSCULAS')
         sleep(0.3)
         letras_maiusculas_1 = chr(random.randint(ord('A'), ord('Z')))
         letras_maiusculas_2 = chr(random.randint(ord('A'), ord('Z')))
@@ -61,7 +61,7 @@ while continuar == True:
 
     if resposta_menu == 5:
         sleep(0.3)
-        print('SENHA DE 8 DIGITOS COM LETRAS MAIÚSCULAS E MENÚSCULAS')
+        print('SENHA DE 8 DIGITOS COM LETRAS MAIÚSCULAS E MINÚSCULAS')
         letras_minusculas_1 = chr(random.randint(ord('a'), ord('z')))
         letras_minusculas_2 = chr(random.randint(ord('a'), ord('z')))
         letras_maiusculas_1 = chr(random.randint(ord('A'), ord('Z')))
@@ -72,7 +72,7 @@ while continuar == True:
 
     if resposta_menu == 6:
         sleep(0.3)
-        print('SENHA DE LETRAS MAIÚSCULAS E MENÚSCULAS')
+        print('SENHA DE LETRAS MAIÚSCULAS E MINÚSCULAS')
         letras_minusculas_1 = chr(random.randint(ord('a'), ord('z')))
         letras_minusculas_2 = chr(random.randint(ord('a'), ord('z')))
         letras_maiusculas_3 = chr(random.randint(ord('A'), ord('Z')))
@@ -86,14 +86,14 @@ while continuar == True:
 
     if resposta_menu == 7:
         sleep(0.3)
-        print('SENHA DE LETRAS E NUMEROS ALEATORIOS')
+        print('SENHA DE LETRAS E NÚMEROS ALEATÓRIOS')
         def random_generator(size=12, chars=string.ascii_uppercase + string.digits):
             return ''.join(random.choice(chars) for _ in range(size))
         print(random_generator())
 
     if resposta_menu == 8:
         sleep(0.3)
-        print('SENHA CHAVE ALEATORIA IDENTIFICADORA UNIVERSAL EXCLUSIVA')
+        print('SENHA CHAVE ALEATÓRIA IDENTIFICADORA UNIVERSAL EXCLUSIVA')
         print(uuid.uuid4())
 
     sleep(1.5)
